@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flyt</string>
+    <string name="welcome_text">Trivia for Your Travels</string>
+    <string name="flight_num">Flight #</string>
+    <string name="search_btn">Search</string>
+    <string name="home_str">Home</string>
+    <string name="score_lbl">Score: 0</string>
+</resources>

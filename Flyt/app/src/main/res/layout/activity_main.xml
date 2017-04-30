@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.devin.flyt.MainActivity">
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0px"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:background="#25308A">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="0.2"
+                android:scaleType="fitXY"
+                android:src="@drawable/flyt_web"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="0.1"
+                android:text="@string/welcome_text"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/flightNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0px"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:height="0px"
+                    android:background="#EEEEEE"
+                    android:ems="10"
+                    android:hint="@string/flight_num"
+                    android:inputType="textPersonName"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                    android:padding="10dip"
+                    android:textColor="#3B3B3B"
+                    android:layout_marginBottom="10dp"/>
+
+                <Button
+                    android:id="@+id/query_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0px"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:height="0px"
+                    android:text="@string/search_btn"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <Button
+                    android:id="@+id/return_to_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:onClick="onClick"
+                    android:layout_weight="0.2"
+                    android:text="@string/home_str" />
+
+                <Button
+                    android:id="@+id/animebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:onClick="onClick"
+                    android:text="Animate" />
+
+                <TextView
+                    android:id="@+id/score_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="right|center_vertical"
+                    android:textColor="#3B3B3B"
+                    android:text="@string/score_lbl" />
+            </LinearLayout>
+
+            <com.esri.arcgisruntime.mapping.view.MapView
+                android:id="@+id/mapView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+            </com.esri.arcgisruntime.mapping.view.MapView>
+        </LinearLayout>
+    </ViewSwitcher>
+
+</android.support.constraint.ConstraintLayout>
